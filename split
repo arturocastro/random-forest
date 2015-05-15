@@ -1,0 +1,27 @@
+function impurity = split(data, labels, feat_idx)
+    n = length(labels);
+
+    numfeatures = length(feat_idx);
+
+    s = 0;
+    
+    best = 0;
+    minentropy = 999999999.9;
+    
+    classes = unique(labels);
+    
+    for i = 1 : numfeatures
+        current_feature = feat_idx(i);
+        
+        t = stump(data(:, current_feature));
+        
+        left_p = t / n;
+        right_p = (n - t) / n;
+        
+        impurity
+        
+        %left_p = sum(labels == classes(1)) / n;
+        %right_p = sum(labels == classes(
+    end
+    
+end

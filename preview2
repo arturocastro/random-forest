@@ -1,0 +1,6 @@
+load heart;
+
+num_of_trees = 100;
+
+random_forest = TreeBagger(num_of_trees, data, labels, 'method', 'classification');
+
